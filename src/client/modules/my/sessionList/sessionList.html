@@ -3,27 +3,27 @@
         <input
             type="search"
             placeholder="Search Sessions..."
-            oninput={handleSearchKeyInput}/>
-        <template for:each={sessions} 
-                  for:item="session" 
-                  for:index="index">
-
-            <a key = {session.id}
-                class = "session"
+            oninput={handleSearchKeyInput}
+        />
+        <template for:each={sessions} for:item="session" for:index="index">
+            <a
+                key={session.id}
+                class="session"
                 data-index={index}
-                onclick={handleSessionClick}>
+                onclick={handleSessionClick}
+            >
                 <div>
-                    <p class="title"> {session.name} </p>
-                    <p class="icon time"> {session.dateTime}</p>
-                    <p class="icon room"> {session.room} </p>
+                    <p class="title">{session.name}</p>
+                    <p class="icon time">{session.dateTime}</p>
+                    <p class="icon room">{session.room}</p>
                 </div>
                 <div class="speaker-pictures">
-                    <template for:each={session.speakers}
-                              for:item="speaker">
-
-                        <img key = {speaker.id}
+                    <template for:each={session.speakers} for:item="speaker">
+                        <img
+                            key={speaker.id}
                             src={speaker.pictureUrl}
-                            alt={speaker.name}/>
+                            alt={speaker.name}
+                        />
                     </template>
                 </div>
             </a>
