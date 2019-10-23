@@ -7,8 +7,8 @@
         <div class="abstract">{session.description}</div>
     </template>
 
-<!-- Speakler Session Details -->
-    <h3> Speakers </h3>
+    <!-- Speakler Session Details -->
+    <h3>Speakers</h3>
     <div class="speaker-list">
         <template if:true={session.speakers}>
             <template for:each={session.speakers} for:item="speaker">
@@ -17,5 +17,4 @@
             </template>
         </template>
     </div>
-
 </template>
